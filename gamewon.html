@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dungeon Survival - Victory!</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: url('dungeon.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Uncial Antiqua', cursive;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .win-box {
+      background: rgba(0,0,0,0.85);
+      border: 3px solid gold;
+      padding: 40px 60px;
+      border-radius: 18px;
+      font-size: 2rem;
+      text-align: center;
+      box-shadow: 0 0 36px 12px #222;
+    }
+    #back-button {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+      transition: transform 0.2s;
+    }
+    #back-button:hover {
+      transform: scale(1.12);
+    }
+  </style>
+</head>
+<body>
+  <div class="win-box">
+    Congratulations!<br><br>
+    You have saved the world from destruction.<br>
+    <span style="color:gold">You are the new hero.</span>
+  </div>
+  <button id="back-button" onclick="location.href='main.html'">
+    <img src="sword_left.png" alt="Back to Menu" style="height:40px;vertical-align:middle;" />
+  </button>
+</body>
+</html>

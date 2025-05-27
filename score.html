@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Game Winners</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 40%;
+      margin: 40px auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: #222;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 style="text-align:center;">Players Who Have Beaten the Game</h2>
+  <table id="winnersTable">
+    <thead>
+      <tr>
+        <th>Username</th>
+      </tr>
+    </thead>
+  </table>
+
+  <script>
+    fetch('get_scores.php')
+      .then(response => response.json())
+      .then(data => {
+        const tbody = document.querySelector("#winnersTable tbody");
+        data.forEach(username => {
+          const row = `<tr><td>${username}</td></tr>`;
+          tbody.innerHTML += row;
+        });
+      })
+      .catch(error => {
+        document.querySelector("#winnersTable tbody").innerHTML =
+          `<tr><td>Error loading winners</td></tr>`;
+      });
+  </script>
+</body>
+
+</html>

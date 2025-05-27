@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dungeon Survival - Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+</head>
+
+<body class="game-page" onclick="handleClick()">
+  <audio id="bg-music" loop>
+    <source src="dungeon_music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button id="music-toggle" onclick="toggleMusic(event)">
+    <img id="music-icon" src="music_off.png" alt="Music Toggle" />
+  </button>
+
+  <button id="back-button" onclick="location.href='main.html'">
+    <img src="sword_left.png" alt="Back to Menu" />
+  </button>
+
+  <div id="inventory-box">
+    <h3>Inventory</h3>
+    <div id="inventory-items"></div>
+  </div>
+
+  <div id="stats-box">
+    <h3>Stats</h3>
+    <img id="class-img" src="choose.png" alt="Character Image" />
+    <ul id="stat-list">
+      <li>HP: <span id="stat-hp">10</span></li>
+      <li>Attack Power: <span id="stat-atk">10</span></li>
+      <li>Magic Power: <span id="stat-mag">10</span></li>
+      <li>Defense: <span id="stat-def">10</span></li>
+      <li>Gold: <span id="stat-gold">0</span></li>
+    </ul>
+  </div>
+
+  <div id="class-selection">
+    <h2>Choose Your Class</h2>
+    <button onclick="selectClass('mage')">Mage</button>
+    <button onclick="selectClass('healer')">Healer</button>
+    <button onclick="selectClass('fighter')">Fighter</button>
+  </div>
+
+  <div id="name-entry" style="display:none;">
+    <input type="text" id="player-name" placeholder="Enter character name" />
+    <button onclick="submitName()">Confirm</button>
+  </div>
+
+  <div id="intro-message" style="display:none;"></div>
+
+  <div id="shop-stage" style="display: none;">
+    <img id="shopkeeper-img" src="shopkeeper.png" alt="Shopkeeper" />
+    <div id="shop-text"></div>
+    <div id="shop-items" style="display: none;"></div>
+    <div id="shop-warning" style="color: red; margin-top: 10px;"></div>
+  </div>
+
+  <div id="fight-stage" style="display:none;">
+    <img id="enemy-img" src="minion.png" alt="Enemy" />
+    <div id="fight-dialogue"></div>
+    <div id="fight-buttons">
+      <button id="fight-btn" onclick="fightEnemy()">
+        <img src="fight.jpg" alt="Fight" />
+      </button>
+      <button id="run-btn" onclick="runFromEnemy()">
+        <img src="run.jpg" alt="Run" />
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

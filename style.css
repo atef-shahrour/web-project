@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Uncial Antiqua', cursive;
+    color: white;
+}
+
+.main-page {
+    background-image: url('dungeon.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.menu-container button {
+    display: block;
+    margin: 15px auto;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #222;
+    color: white;
+    border: 2px solid #555;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: 'Uncial Antiqua', cursive;
+}
+
+.menu-container button:hover {
+    background-color: #444;
+}
+
+.game-page {
+    background-image: url('game.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+#stats-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 15px;
+    border: 2px solid #666;
+    border-radius: 8px;
+    width: 220px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#stats-box img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    border: 1px solid #555;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#stats-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    line-height: 1.6;
+}
+
+#class-selection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#class-selection button,
+#name-entry button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Uncial Antiqua', cursive;
+    background-color: #222;
+    color: white;
+    border: 2px solid #555;
+}
+
+#name-entry {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#player-name {
+    font-family: 'Uncial Antiqua', cursive;
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    border: 2px solid #666;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+#intro-message {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    max-width: 500px;
+    text-align: center;
+    border: 2px solid #555;
+}
+
+#back-button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#back-button img {
+    width: 48px;
+    height: auto;
+}
+
+#music-toggle {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#music-toggle img {
+    width: 48px;
+    height: auto;
+}
+
+.score-page {
+    background-color: #111;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.score-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #222;
+    color: white;
+    border: 2px solid #555;
+    font-family: 'Uncial Antiqua', cursive;
+    cursor: pointer;
+}
+
+.score-container button:hover {
+    background-color: #444;
+}
+
+#shop-stage {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    border: 2px solid #555;
+}
+
+#shopkeeper-img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#shop-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#shop-items {
+    margin-top: 10px;
+}
+
+.shop-item {
+    margin: 5px 0;
+    cursor: pointer;
+    border: 1px solid #777;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #222;
+    transition: background-color 0.2s ease;
+}
+
+#inventory-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border: 2px solid #666;
+    border-radius: 8px;
+    width: 150px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#inventory-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+#inventory-items img {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #444;
+    background-color: #222;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+#enemy-img {
+    width: 128px;
+    height: 128px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+#fight-dialogue {
+    margin: 16px 0 24px 0;
+    color: #fff;
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#fight-btn,
+#run-btn {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#fight-btn img,
+#run-btn img {
+    height: 48px;
+    width: 48px;
+}
+
+#fight-stage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background: none;
+}
+
+#fight-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 12px;
+}
